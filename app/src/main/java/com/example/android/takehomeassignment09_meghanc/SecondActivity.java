@@ -6,9 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Calendar;
 
 
 /**
@@ -25,7 +28,15 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.second);
 
         Intent intent = getIntent();
-
+        final TextView dateView = (TextView) findViewById(R.id.date);
+        dateView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Calendar cal = Calendar.getInstance();
+                String today = (cal.getTime()).toString();
+                dateView.setText(today);
+            }
+        });
     }
     public void set(View view){
         Animal temp;

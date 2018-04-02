@@ -7,4 +7,5 @@
     <string name="fur">Has Fur? </string>
     <string name="set">Set</string>
     <string name="add">Add</string>
+    <string name="date">Click for Today\'s Date and Time: </string>
 </resources>
